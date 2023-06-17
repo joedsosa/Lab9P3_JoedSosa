@@ -165,4 +165,10 @@ int main(){
 
     Menu(&paypal, wallet, adminArchivos);
     return 0;
+    //Eliiminar memoriaS
+    for (UsuarioPaypal* usuario : paypal.getUsuarios()) {
+        delete usuario;
+    }
+    paypal.getUsuarios().clear();
+
 }
