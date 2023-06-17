@@ -59,3 +59,22 @@ Wallet* UsuarioPaypal::getWallet() {
 void UsuarioPaypal::agregarTransaccion(string& transaccion) {
     historial.push_back(transaccion);
 }
+void UsuarioPaypal::depositar(double cantidad) {
+    saldo += cantidad;
+    std::string transaccion = "Depósito de $" + std::to_string(cantidad);
+    historial.push_back(transaccion);
+    std::cout << "Se ha depositado $" << cantidad << " en la cuenta." << std::endl;
+}
+
+bool UsuarioPaypal::retirar(double cantidad) {
+    if (cantidad > saldo) {
+        std::cout << "No tiene suficiente saldo en la cuenta." << std::endl;
+        return false;
+    }
+
+    saldo -= cantidad;
+    std::string transaccion = "Retiro de $" + std::to_string(cantidad);
+    historial.push_back(transaccion);
+    std::cout << "Se ha retirado $" << cantidad << " de la cuenta." << std::endl;
+    return true;
+}
