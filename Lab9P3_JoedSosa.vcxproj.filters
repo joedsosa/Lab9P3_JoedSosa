@@ -18,5 +18,31 @@
     <ClCompile Include="Lab9P3_JoedSosa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Wallet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Paypal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UsuarioPaypal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdministradoraArchivos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Wallet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Paypal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UsuarioPaypal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdministradoraArchivos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

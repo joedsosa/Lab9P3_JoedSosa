@@ -1,22 +1,30 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Wallet.h"
 using namespace std;
+class UsuarioPaypal {
+public:
+    UsuarioPaypal(const string& nombreUsuario, const string& numeroIdentidad, const string& contrasena);
 
-class UsuarioPaypal{
+    string getNombreUsuario();
+    string getNumeroIdentidad();
+    string getContrasena();
+    double getSaldo();
+    vector<string> getHistorial();
+    bool validarContrasena(const string& contrasena);
+    void setSaldo(double saldo);
+    void setHistorial(vector<string>& historial);
+    Wallet* getWallet();
+    void setWallet(Wallet* wallet);
+    void agregarTransaccion(string& transaccion);
+
 private:
     string nombreUsuario;
     string numeroIdentidad;
     string contrasena;
     double saldo;
     vector<string> historial;
-
-public:
-    UsuarioPaypal(string nombreUsuario, string numeroIdentidad, string contrasena) {
-        this->nombreUsuario = nombreUsuario;
-        this->numeroIdentidad = numeroIdentidad;
-        this->contrasena = contrasena;
-        this->saldo = 0.0;
-    }
+    Wallet* wallet;
+    
 };
-

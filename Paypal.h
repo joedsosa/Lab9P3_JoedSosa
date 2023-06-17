@@ -1,6 +1,6 @@
 #ifndef PAYPAL_H
 #define PAYPAL_H
-
+#include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
@@ -11,9 +11,11 @@ private:
     vector<UsuarioPaypal*> usuarios;
 
 public:
-    void crearCuenta(std::string nombreUsuario, string numeroIdentidad, string contrasena);
+    void crearCuenta(string nombreUsuario, string numeroIdentidad, string contrasena);
     UsuarioPaypal* buscarUsuario(string nombreUsuario);
     vector<UsuarioPaypal*> getUsuarios();
+    void agregarUsuario(UsuarioPaypal* usuario);
+
 };
 
 #endif  // PAYPAL_H
