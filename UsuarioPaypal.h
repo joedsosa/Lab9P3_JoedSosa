@@ -18,6 +18,8 @@ public:
     Wallet* getWallet();
     void setWallet(Wallet* wallet);
     void agregarTransaccion(string& transaccion);
+    void depositar(double cantidad);
+    bool retirar(double cantidad);
 
 private:
     string nombreUsuario;

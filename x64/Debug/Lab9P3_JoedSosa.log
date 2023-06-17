@@ -1,5 +1,6 @@
 ﻿  AdministradoraArchivos.cpp
   Lab9P3_JoedSosa.cpp
+C:\Users\joeds\OneDrive\Escritorio\Lab9P3_JoedSosa\Lab9P3_JoedSosa.cpp(51,25): warning C4804: '>': unsafe use of type 'bool' in operation
   Paypal.cpp
   UsuarioPaypal.cpp
   Wallet.cpp

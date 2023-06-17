@@ -41,21 +41,17 @@ void menuPaypal(Paypal& paypal) {
                     double deposito;
                     cout << "Ingrese la cantidad a depositar: $";
                     cin >> deposito;
-                    usuario->setSaldo(usuario->getSaldo() + deposito);
-                    cout << "Se ha depositado $" << deposito << " en su cuenta. " << endl;
+                    usuario->depositar(deposito);
                     break;
                 }
                 case 3: {
                     double retiro;
                     cout << "Ingrese la cantidad a retirar: $";
                     cin >> retiro;
-                    if (retiro > usuario->getSaldo()) {
+                    if (retiro > usuario->retirar(retiro)) {
                         cout << "No tiene suficiente saldo en su cuenta." << endl;
                     }
-                    else {
-                        usuario->setSaldo(usuario->getSaldo() - retiro);
-                        cout << "Se ha retirado $" << retiro << " de su cuenta." << endl;
-                    }
+                    
                     break;
                 }
                 case 4: {
